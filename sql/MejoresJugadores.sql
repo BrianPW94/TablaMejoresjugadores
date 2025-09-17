@@ -1,4 +1,5 @@
-use MejoresJugadores
+-- nombre base de datos
+use MejoresJugadores 
 
 -- futbolistas
 
@@ -341,4 +342,5 @@ on f.pais_id = p.pais_id
 join mejoresjugadores.equipos e 
 on f.equipo_id = e.equipo_id 
 where f.asistencias  >=1
+
 order by f.asistencias desc, f.partidos_jugados asc, f.apellidos asc
