@@ -12,4 +12,5 @@ Proyecto jsp para gestionar datos de jugadores.
 ## Requisitos
 - Java JDK 8+
 - MySQL Server
-- DBeaver o IDE similar
+- DBeaver o similar (MYSQL)
+- Eclipse IDE
