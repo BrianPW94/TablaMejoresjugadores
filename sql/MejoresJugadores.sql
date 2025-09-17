@@ -1,5 +1,4 @@
--- nombre base de datos
-use MejoresJugadores 
+ 
 
 -- futbolistas
 
@@ -327,9 +326,9 @@ select * from  mejoresjugadores.equipos where equipo_id = 19
 
 -- select goleadores metodo listar
 select f.futbolista_id, f.nombres , f.apellidos , e.nombre as Equipo , f.goles , f.partidos_jugados , f.edad , f.puesto, p.nombre_pais as pais
-from mejoresjugadores.futbolistas f join mejoresjugadores.paises p 
+from futbolistas f join paises p 
 on f.pais_id = p.pais_id 
-join mejoresjugadores.equipos e 
+join equipos e 
 on f.equipo_id = e.equipo_id 
 where f.goles >=1
 order by f.goles desc, f.partidos_jugados , f.apellidos asc
@@ -337,10 +336,11 @@ order by f.goles desc, f.partidos_jugados , f.apellidos asc
 
 -- --select asistentes metodo listar
 select f.futbolista_id, f.nombres , f.apellidos , e.nombre as Equipo , f.asistencias, f.partidos_jugados , f.edad , f.puesto , p.nombre_pais as pais
-from mejoresjugadores.futbolistas f join mejoresjugadores.paises p 
+from futbolistas f join paises p 
 on f.pais_id = p.pais_id 
-join mejoresjugadores.equipos e 
+join equipos e 
 on f.equipo_id = e.equipo_id 
 where f.asistencias  >=1
 
 order by f.asistencias desc, f.partidos_jugados asc, f.apellidos asc
+
